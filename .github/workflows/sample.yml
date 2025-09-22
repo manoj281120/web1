@@ -14,6 +14,7 @@ jobs:
          password: ${{secrets.DOCKER_PASSWORD}}
      - name: building docker image
        run: |
+          cd odin-recipies
           docker build -t ${{secrets.DOCKER_USERNAME}}/img11 .
           docker push ${{secrets.DOCKER_USERNAME}}/img11
      
